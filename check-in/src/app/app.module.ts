@@ -3,16 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { ConfirmComponent } from './confirm/confirm.component';
+import { StoreModule } from '@ngrx/store';
+import { loginReducer } from './state/login.reducer';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ZipcodeDirective } from './directive/zipcode.directive';
+import { AuthService } from './service/auth.service';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    ConfirmComponent,
+    ZipcodeDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    StoreModule.forRoot({login: loginReducer}),
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

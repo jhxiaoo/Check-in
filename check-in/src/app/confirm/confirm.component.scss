@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, 0);
+  }
+  .title {
+    background: linear-gradient(#2377a7, #033852);
+    height: 120px;
+    min-width: 300px;
+    opacity: 0.9;
+    position: absolute;
+    color: white;
+    padding-left: 20px;
+  }
+  .ticket {
+    position: absolute;
+    margin-top: 60px;
+    max-width: 250px;
+    background-color: aliceblue;
+    padding: 20px;
+  }
+  
+  button {
+    width: 260px;
+    background-color: red;
+    color: white;
+    height: 35px;
+    border: none;
+  }

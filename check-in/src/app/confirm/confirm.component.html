@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="title">
+      <h2>Here is your vist</h2>
+    </div>
+    <div class="ticket">
+      <div>
+        <p>
+          Verify the details of your visit <br />Complete consnets and choose
+          communication preferences
+        </p>
+      </div>
+      <hr />
+      <div>
+        <h2>{{ ticket.appointmentType }}</h2>
+        <h2>{{ ticket.appointmentDateTime }}</h2>
+      </div>
+      <div>
+        <h3>Who</h3>
+        <p>{{ ticket.firstName }} {{ ticket.lastName }}</p>
+      </div>
+      <div>
+        <h3>Where</h3>
+        <p>
+          {{ ticket.address }}, {{ ticket.city }}, {{ ticket.zipCode }},
+          {{ ticket.state }}
+        </p>
+      </div>
+      <div>
+        <h3>Before you start</h3>
+        <p>
+          If you're inactive for 15 minutes, we'll end this session and your
+          changes won't be saved
+        </p>
+      </div>
+      <button>Start check-in</button>
+    </div>
+  </div>
+  

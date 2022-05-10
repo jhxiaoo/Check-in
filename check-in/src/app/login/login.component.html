@@ -1,0 +1,22 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="header">Check-In (EXP: 2020-01-01 12345)</div>
+    <div class="content">
+      <p class="text">Hi there, let's confirm it's you</p>
+      <div class="description">
+        <p>Enter the patients date of virth and ZIP code to start check-in</p>
+      </div>
+      <div class="check-in">
+        <label for="DOB">Patient's date of birth</label>
+        <input id="DOB" formControlName="DOB" type="date" />
+        <label for="zipcode">Patients zipcode(5 digit)</label>
+        <input appZipcode id="zipcode" formControlName="zipCode" type="text" />
+        <button id="submitbtn" type="submit">
+          {{ status }}
+        </button>
+        <div *ngIf="isLoading">
+            Is Loading...
+        </div>
+      </div>
+    </div>
+  </form>
+  
